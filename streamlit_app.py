@@ -203,14 +203,17 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # 渲染8张贴纸
-st.markdown(f'<div class="sticker sticker-sun">< img src="{ASSETS["sun"]}" alt="sun"></div>', unsafe_allow_html=True)
-st.markdown(f'<div class="sticker sticker-rainbow">< img src="{ASSETS["rainbow"]}" alt="rainbow"></div>', unsafe_allow_html=True)
-st.markdown(f'<div class="sticker sticker-rabbit">< img src="{ASSETS["rabbit"]}" alt="rabbit"></div>', unsafe_allow_html=True)
-st.markdown(f'<div class="sticker sticker-flower">< img src="{ASSETS["flower"]}" alt="flower"></div>', unsafe_allow_html=True)
-st.markdown(f'<div class="sticker sticker-butterfly">< img src="{ASSETS["butterfly"]}" alt="butterfly"></div>', unsafe_allow_html=True)
-st.markdown(f'<div class="sticker sticker-cloud">< img src="{ASSETS["cloud"]}" alt="cloud"></div>', unsafe_allow_html=True)
-st.markdown(f'<div class="sticker sticker-star">< img src="{ASSETS["star"]}" alt="star"></div>', unsafe_allow_html=True)
-st.markdown(f'<div class="sticker sticker-moon">< img src="{ASSETS["moon"]}" alt="moon"></div>', unsafe_allow_html=True)
+st.markdown(f"""
+<div class="sticker sticker-sun">< img src='{ASSETS['sun']}' alt='sun'></div>
+<div class="sticker sticker-rainbow">< img src='{ASSETS['rainbow']}' alt='rainbow'></div>
+<div class="sticker sticker-rabbit">< img src='{ASSETS['rabbit']}' alt='rabbit'></div>
+<div class="sticker sticker-flower">< img src='{ASSETS['flower']}' alt='flower'></div>
+<div class="sticker sticker-butterfly">< img src='{ASSETS['butterfly']}' alt='butterfly'></div>
+<div class="sticker sticker-cloud">< img src='{ASSETS['cloud']}' alt='cloud'></div>
+<div class="sticker sticker-star">< img src='{ASSETS['star']}' alt='star'></div>
+<div class="sticker sticker-moon">< img src='{ASSETS['moon']}' alt='moon'></div>
+""", unsafe_allow_html=True)
+
 
 # 主体卡片
 st.markdown('<div class="main-card">', unsafe_allow_html=True)
