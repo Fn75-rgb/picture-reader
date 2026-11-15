@@ -7,7 +7,6 @@ st.set_page_config(
     layout="centered"
 )
 
-# 8张贴纸，和你上传的一一对应
 ASSETS = {
     "sun": "assets/sun.png",
     "rainbow": "assets/rainbow.png",
@@ -70,15 +69,6 @@ st.markdown("""
         border: 2px solid rgba(255, 255, 255, 0.6);
     }
 
-    .upload-box {
-        background: #FFF8EF;
-        border: 2px dashed #FFC997;
-        border-radius: 22px;
-        padding: 30px 20px;
-        text-align: center;
-        margin-top: 10px;
-    }
-
     .stButton > button {
         background: linear-gradient(90deg, #FFB35C, #FF7F50);
         color: white;
@@ -98,24 +88,6 @@ st.markdown("""
         transform: translateY(-2px);
     }
 
-    .css-1d391kg, .stSidebar {
-        background: rgba(255, 255, 255, 0.65);
-        border-radius: 20px;
-        padding: 16px;
-    }
-
-    .stImage {
-        border-radius: 18px;
-        overflow: hidden;
-        margin-top: 16px;
-    }
-
-    .uploadedFile {
-        background: white;
-        border-radius: 16px;
-        padding: 12px;
-    }
-
     .result-box {
         background: #FFF7EC;
         border-left: 5px solid #FFB35C;
@@ -125,7 +97,6 @@ st.markdown("""
         color: #7A3E1C;
     }
 
-    /* 贴纸定位样式 */
     .sticker {
         position: fixed;
         z-index: 1;
@@ -199,10 +170,8 @@ st.markdown("""
         width: 70px;
         height: 70px;
     }
-</style>
 """, unsafe_allow_html=True)
 
-# 渲染8张贴纸
 st.markdown(f"""
 <div class="sticker sticker-sun">< img src='{ASSETS['sun']}' alt='sun'></div>
 <div class="sticker sticker-rainbow">< img src='{ASSETS['rainbow']}' alt='rainbow'></div>
@@ -214,8 +183,6 @@ st.markdown(f"""
 <div class="sticker sticker-moon">< img src='{ASSETS['moon']}' alt='moon'></div>
 """, unsafe_allow_html=True)
 
-
-# 主体卡片
 st.markdown('<div class="main-card">', unsafe_allow_html=True)
 
 st.markdown("<h1>✨ 图书伴读AI ✨</h1>", unsafe_allow_html=True)
@@ -253,7 +220,6 @@ if upload_file is not None:
 
 st.markdown('</div>', unsafe_allow_html=True)
 
-# 侧边栏
 with st.sidebar:
     st.header("🎀 设置")
     mode = st.radio("选择模式", ["模拟演示（无后端）", "连接后端"])
