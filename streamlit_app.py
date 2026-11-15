@@ -7,16 +7,16 @@ st.set_page_config(
     layout="centered"
 )
 
-# 贴纸图片地址（后面改成你自己的！）
+# 8张贴纸，和你上传的一一对应
 ASSETS = {
-    "sun": "https://raw.githubusercontent.com/你的用户名/你的仓库名/main/assets/sun.png",
-    "rainbow": "https://raw.githubusercontent.com/你的用户名/你的仓库名/main/assets/rainbow.png",
-    "book_open": "https://raw.githubusercontent.com/你的用户名/你的仓库名/main/assets/book-open.png",
-    "book_stack": "https://raw.githubusercontent.com/你的用户名/你的仓库名/main/assets/book-stack.png",
-    "flower": "https://raw.githubusercontent.com/你的用户名/你的仓库名/main/assets/flower.png",
-    "cat": "https://raw.githubusercontent.com/你的用户名/你的仓库名/main/assets/cat.png",
-    "cloud": "https://raw.githubusercontent.com/你的用户名/你的仓库名/main/assets/cloud.png",
-    "star": "https://raw.githubusercontent.com/你的用户名/你的仓库名/main/assets/star.png",
+    "sun": "assets/sun.png",
+    "rainbow": "assets/rainbow.png",
+    "flower": "assets/flower.png",
+    "cloud": "assets/cloud.png",
+    "star": "assets/star.png",
+    "rabbit": "assets/rabbit.png",
+    "butterfly": "assets/butterfly.png",
+    "moon": "assets/moon.png"
 }
 
 st.markdown("""
@@ -125,7 +125,7 @@ st.markdown("""
         color: #7A3E1C;
     }
 
-    /* 统一3D贴纸 */
+    /* 贴纸定位样式 */
     .sticker {
         position: fixed;
         z-index: 1;
@@ -155,11 +155,11 @@ st.markdown("""
         height: 55px;
     }
 
-    .sticker-book-open {
-        top: 115px;
+    .sticker-rabbit {
+        top: 110px;
         right: 70px;
-        width: 100px;
-        height: 75px;
+        width: 90px;
+        height: 90px;
     }
 
     .sticker-flower {
@@ -169,18 +169,11 @@ st.markdown("""
         height: 80px;
     }
 
-    .sticker-cat {
+    .sticker-butterfly {
         bottom: 85px;
         right: 95px;
         width: 85px;
         height: 85px;
-    }
-
-    .sticker-book-stack {
-        bottom: 75px;
-        right: 40px;
-        width: 75px;
-        height: 75px;
     }
 
     .sticker-cloud {
@@ -199,18 +192,25 @@ st.markdown("""
         height: 30px;
         opacity: 0.6;
     }
+
+    .sticker-moon {
+        bottom: 120px;
+        right: 160px;
+        width: 70px;
+        height: 70px;
+    }
 </style>
 """, unsafe_allow_html=True)
 
-# 3D贴纸
+# 渲染8张贴纸
 st.markdown(f'<div class="sticker sticker-sun">< img src="{ASSETS["sun"]}" alt="sun"></div>', unsafe_allow_html=True)
 st.markdown(f'<div class="sticker sticker-rainbow">< img src="{ASSETS["rainbow"]}" alt="rainbow"></div>', unsafe_allow_html=True)
-st.markdown(f'<div class="sticker sticker-book-open">< img src="{ASSETS["book_open"]}" alt="book-open"></div>', unsafe_allow_html=True)
+st.markdown(f'<div class="sticker sticker-rabbit">< img src="{ASSETS["rabbit"]}" alt="rabbit"></div>', unsafe_allow_html=True)
 st.markdown(f'<div class="sticker sticker-flower">< img src="{ASSETS["flower"]}" alt="flower"></div>', unsafe_allow_html=True)
-st.markdown(f'<div class="sticker sticker-cat">< img src="{ASSETS["cat"]}" alt="cat"></div>', unsafe_allow_html=True)
-st.markdown(f'<div class="sticker sticker-book-stack">< img src="{ASSETS["book_stack"]}" alt="book-stack"></div>', unsafe_allow_html=True)
+st.markdown(f'<div class="sticker sticker-butterfly">< img src="{ASSETS["butterfly"]}" alt="butterfly"></div>', unsafe_allow_html=True)
 st.markdown(f'<div class="sticker sticker-cloud">< img src="{ASSETS["cloud"]}" alt="cloud"></div>', unsafe_allow_html=True)
 st.markdown(f'<div class="sticker sticker-star">< img src="{ASSETS["star"]}" alt="star"></div>', unsafe_allow_html=True)
+st.markdown(f'<div class="sticker sticker-moon">< img src="{ASSETS["moon"]}" alt="moon"></div>', unsafe_allow_html=True)
 
 # 主体卡片
 st.markdown('<div class="main-card">', unsafe_allow_html=True)
