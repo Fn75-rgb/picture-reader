@@ -27,14 +27,13 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# 贴纸放在侧边
 col1, col2, col3 = st.columns([1,3,1])
 with col1:
     st.image("assets/sun.png", width=80)
     st.image("assets/flower.png", width=70)
 with col3:
-    st.image("assets/rabbit.png", width=80)
-    st.image("assets/butterfly.png", width=70)
+    st.image("assets/cat.png", width=80)
+    st.image("assets/cloud.png", width=70)
 
 with col2:
     st.markdown('<div class="card">', unsafe_allow_html=True)
