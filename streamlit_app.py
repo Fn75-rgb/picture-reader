@@ -202,7 +202,3 @@ if upload_file is not None:
         st.markdown('</div>', unsafe_allow_html=True)
 
 st.markdown('</div>', unsafe_allow_html=True)
-""")
-
-# 注意：上面这段粘贴完，代码框里应该只剩下 Python 代码，不要保留 ```python 或 ```
-
